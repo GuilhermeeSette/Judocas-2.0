@@ -1,5 +1,3 @@
-# README
-
 # Judocas-2.0
 
 ## Features
