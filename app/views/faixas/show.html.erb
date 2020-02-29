@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cor:</strong>
+  <%= @faixa.cor %>
+</p>
+
+<p>
+  <strong>Data entrega:</strong>
+  <%= @faixa.data_entrega %>
+</p>
+
+<%= link_to 'Edit', edit_faixa_path(@faixa) %> |
+<%= link_to 'Back', faixas_path %>

@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Professors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Registro cbj</th>
+      <th>Telefone1</th>
+      <th>Telefone2</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Observacoes</th>
+      <th>Rg</th>
+      <th>Rua</th>
+      <th>Numero residencia</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professors.each do |professor| %>
+      <tr>
+        <td><%= professor.nome %></td>
+        <td><%= professor.registro_cbj %></td>
+        <td><%= professor.telefone1 %></td>
+        <td><%= professor.telefone2 %></td>
+        <td><%= professor.email %></td>
+        <td><%= professor.cpf %></td>
+        <td><%= professor.observacoes %></td>
+        <td><%= professor.rg %></td>
+        <td><%= professor.rua %></td>
+        <td><%= professor.numero_residencia %></td>
+        <td><%= professor.bairro %></td>
+        <td><%= professor.cidade %></td>
+        <td><%= professor.estado %></td>
+        <td><%= professor.cep %></td>
+        <td><%= link_to 'Show', professor %></td>
+        <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+        <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professor', new_professor_path %>

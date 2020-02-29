@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @entidade.nome %>
+</p>
+
+<p>
+  <strong>Telefone1:</strong>
+  <%= @entidade.telefone1 %>
+</p>
+
+<p>
+  <strong>Telefone2:</strong>
+  <%= @entidade.telefone2 %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @entidade.cnpj %>
+</p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @entidade.rua %>
+</p>
+
+<p>
+  <strong>Numero residencia:</strong>
+  <%= @entidade.numero_residencia %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @entidade.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @entidade.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @entidade.estado %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @entidade.cep %>
+</p>
+
+<%= link_to 'Edit', edit_entidade_path(@entidade) %> |
+<%= link_to 'Back', entidades_path %>
