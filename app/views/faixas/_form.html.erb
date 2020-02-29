@@ -1,0 +1,27 @@
+<%= form_with(model: faixa, local: true) do |form| %>
+  <% if faixa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(faixa.errors.count, "error") %> prohibited this faixa from being saved:</h2>
+
+      <ul>
+        <% faixa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cor %>
+    <%= form.text_field :cor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_entrega %>
+    <%= form.date_select :data_entrega %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

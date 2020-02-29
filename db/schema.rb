@@ -10,9 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_02_29_005535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alunos", force: :cascade do |t|
+    t.string "nome"
+    t.string "registro_cbj"
+    t.string "telefone1"
+    t.string "telefone2"
+    t.string "email"
+    t.string "cpf"
+    t.text "observacoes"
+    t.string "rg"
+    t.string "rua"
+    t.string "numero_residencia"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "estado"
+    t.string "cep"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "entidades", force: :cascade do |t|
+    t.string "nome"
+    t.string "telefone1"
+    t.string "telefone2"
+    t.string "cnpj"
+    t.string "rua"
+    t.string "numero_residencia"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "estado"
+    t.string "cep"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "faixas", force: :cascade do |t|
+    t.string "cor"
+    t.date "data_entrega"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "professors", force: :cascade do |t|
+    t.string "nome"
+    t.string "registro_cbj"
+    t.string "telefone1"
+    t.string "telefone2"
+    t.string "email"
+    t.string "cpf"
+    t.text "observacoes"
+    t.string "rg"
+    t.string "rua"
+    t.string "numero_residencia"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "estado"
+    t.string "cep"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end

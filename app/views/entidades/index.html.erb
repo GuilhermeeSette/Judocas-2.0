@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone1</th>
+      <th>Telefone2</th>
+      <th>Cnpj</th>
+      <th>Rua</th>
+      <th>Numero residencia</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entidades.each do |entidade| %>
+      <tr>
+        <td><%= entidade.nome %></td>
+        <td><%= entidade.telefone1 %></td>
+        <td><%= entidade.telefone2 %></td>
+        <td><%= entidade.cnpj %></td>
+        <td><%= entidade.rua %></td>
+        <td><%= entidade.numero_residencia %></td>
+        <td><%= entidade.bairro %></td>
+        <td><%= entidade.cidade %></td>
+        <td><%= entidade.estado %></td>
+        <td><%= entidade.cep %></td>
+        <td><%= link_to 'Show', entidade %></td>
+        <td><%= link_to 'Edit', edit_entidade_path(entidade) %></td>
+        <td><%= link_to 'Destroy', entidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entidade', new_entidade_path %>

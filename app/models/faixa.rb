@@ -1,0 +1,2 @@
+class Faixa < ApplicationRecord
+end
