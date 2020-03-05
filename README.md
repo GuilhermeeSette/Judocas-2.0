@@ -45,3 +45,28 @@
 - PostgreSQL
 
 Hospedado em [Heroku](www.heroku.com)
+
+
+
+
+&nbsp;
+
+
+## Setup local
+---
+
+> É preciso ter postgreSQL instalado em sua máquina.
+
+No arquivo `database.yml` mudar os campos `username` e `password` para as credenciais de seu banco.
+
+`git clone <url_projeto>`
+
+`bundle install`
+
+`rails db:setup`
+
+`rails db:migrate`
+
+`rails server`
+
+
