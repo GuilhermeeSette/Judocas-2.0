@@ -25,20 +25,6 @@
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
 
 ## Modelagem
 ---
@@ -49,7 +35,6 @@
 
 &nbsp;
 
-&nbsp;
 
 ## Stack
 ---
