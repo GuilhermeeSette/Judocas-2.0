@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <div id="mySidenav" class="sidenav">
+      
+      <%= link_to (image_tag 'logo.png'), root_path, class: "logo"%>
+      
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <br>
+      <br>
+      
+      <a href="#" class="">
+        <%= link_to 'Alunos', alunos_path, class: "nav-item"%>
+      </a>
+      <a href="#" class="">
+        <%= link_to 'Professores', professors_path, class: "nav-item"%>
+      </a>
+      <a href="#" class="">
+        <%= link_to 'Entidades', entidades_path, class: "nav-item"%>
+      </a>
+    </div>
+
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
     <%= yield %>
   </body>
 </html>
+

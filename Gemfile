@@ -27,6 +27,8 @@ gem 'rubocop', '~> 0.80.0', require: false
 
 gem 'bootstrap-sass'
 
+gem 'font_awesome5_rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
