@@ -19,8 +19,6 @@ jobs:
         ruby-version: 2.6.x
     - name: Build and test with Rake
       run: |
-        rvm install ruby-2.6.3
-        rvm --default use ruby-2.6.3
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake
