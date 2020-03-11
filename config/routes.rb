@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'dashboard#show'
   resources :entidades
   resources :faixas
   resources :professors

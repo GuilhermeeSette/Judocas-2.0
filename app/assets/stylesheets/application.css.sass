@@ -16,3 +16,79 @@
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+body
+  font-family: "Lato", sans-serif
+  background-color: #F7F8FC
+
+.sidenav
+  height: 100%
+  width: 0
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  background-color: #363740
+  overflow-x: hidden
+  transition: 0.5s
+  padding-top: 60px
+
+.sidenav .nav-item
+  padding: 8px 8px 8px 32px
+  text-decoration: none
+  font-size: 25px
+  color: #A4A6B3
+  display: block
+  transition: 0.3s
+  font-family: Muli
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 20px
+  letter-spacing: 0.2px
+
+
+.sidenav .nav-item:hover 
+  color: #60616b
+  background-color: #363740
+  border-bottom: 3px solid #797b88
+  padding-right: 40%
+
+.topnav .nav-item.active
+  border-bottom: 3px solid #797b88
+
+.sidenav:hover
+  color: #a7aabe
+
+.sidenav .closebtn:hover
+  color: #60616b
+  background-color: #363740
+
+.logo:hover
+  background-color: #363740
+  
+.logo
+  position: absolute
+  width: 63px
+  height: 65px
+  left: 33px
+  top: 4px
+
+.sidenav .closebtn 
+  position: absolute
+  top: 0
+  right: 25px
+  font-size: 36px
+  margin-left: 50px
+
+
+#main 
+  transition: margin-left .5s
+  padding: 16px
+
+
+@media screen and (max-height: 450px) 
+  .sidenav 
+    padding-top: 15px
+  .sidenav a 
+    font-size: 18px
