@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      run:
-        name: Set Ruby Version
-        command:  echo "ruby-2.6.3" > ~/.ruby-version
+    - name: Set Ruby Version
+      run: |
+        echo "ruby-2.6.3" > ~/.ruby-version
     - name: Build and test with Rake
       run: |
         gem install bundler
