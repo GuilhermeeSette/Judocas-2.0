@@ -16,7 +16,10 @@ jobs:
     - name: Set up Ruby 2.6
       run: |
         echo "ruby-2.4.4" > ~/.ruby-version
-    - name: Install Rubocop
+    - name: Build and test with Rake
       run: |
-        gem install rubocop
-
+        sudo gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rails db:create
+        bundle exec rails db:migrate
+        bundle exec rails test
