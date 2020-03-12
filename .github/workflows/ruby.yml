@@ -18,6 +18,6 @@ jobs:
         echo "ruby-2.6.3" > ~/.ruby-version
     - name: Build and test with Rake
       run: |
-        gem install bundler
+        gem install bundler --version '1.14.6' --no-ri --no-rdoc
         bundle install --jobs 4 --retry 3
         bundle exec rake
