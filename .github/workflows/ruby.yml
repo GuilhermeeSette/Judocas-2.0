@@ -16,15 +16,7 @@ jobs:
     - name: Set up Ruby 2.6
       run: |
         echo "ruby-2.4.4" > ~/.ruby-version
-    - name: Build and test with Rake
-      env:
-        PGHOST: 127.0.0.1
-        PGUSER: postgres
-        RAILS_ENV: test
+    - name: Install Rubocop
       run: |
-        sudo apt-get -yqq install libpq-dev
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rails db:create
-        bundle exec rails db:migrate
-        bundle exec rails test
+        gem install rubocop
+
