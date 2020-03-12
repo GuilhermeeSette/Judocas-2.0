@@ -13,12 +13,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set Ruby Version
-      run: |
-        rvm install 2.3.4
-        echo . $(rvm 2.3.4 do rvm env --path) >> $BASH_ENV
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6.3'
     - name: Build and test with Rake
+      env:
+        PGHOST: 127.0.0.1
+        PGUSER: postgres
+        RAILS_ENV: test
       run: |
+        sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rake
+        bundle exec rails db:create
+        bundle exec rails db:migrate
+        bundle exec rails test
