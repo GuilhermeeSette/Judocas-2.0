@@ -15,10 +15,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.6
       run: |
-        echo "ruby-2.4.4" > ~/.ruby-version
+        echo "ruby-2.6.3" > ~/.ruby-version
     - name: Build and test with Rake
       run: |
         sudo gem install bundler
-        bundle update --bundler
-        bundle install --jobs 4 --retry 3
         rake
