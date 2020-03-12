@@ -15,8 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set Ruby Version
       run: |
-        echo "ruby-2.6.3" > ~/.ruby-version
+        rvm install 2.3.4
+        echo . $(rvm 2.3.4 do rvm env --path) >> $BASH_ENV
     - name: Build and test with Rake
       run: |
-        rake test
-
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
