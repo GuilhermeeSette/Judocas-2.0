@@ -19,4 +19,4 @@ jobs:
     - name: Build and test with Rake
       run: |
         sudo gem install bundler
-        rake
+        rake test
