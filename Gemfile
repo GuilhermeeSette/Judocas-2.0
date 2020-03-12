@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| "https://931175c4e61e1046457329ab1b85771b93363e4c:x-oauth-basic@github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
