@@ -29,9 +29,8 @@ jobs:
     - name: Build and test with Rake
       env:
         POSTGRES_HOST: 127.0.0.1
-        POSTGRES_DB: judocas_test
         POSTGRES_USER: guilhermesette
-        POSTGRES_PASSWORD:
+        POSTGRES_PASSWORD: postgres
         RAILS_ENV: test
       run: |
         echo ruby --version

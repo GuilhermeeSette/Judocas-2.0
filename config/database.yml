@@ -50,5 +50,5 @@ test:
   database: judocas_test
   pool: 5
   username: guilhermesette
-  password:
+  password: postgres
   timeout: 5000
