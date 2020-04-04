@@ -20,6 +20,5 @@ jobs:
       run: |
         echo ruby --version
         sudo gem install bundler -v 1.17.2
-        bundle install
-        bundle update rails
-        rake test
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
