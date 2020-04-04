@@ -11,12 +11,26 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      db:
+        image: postgres:11
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.5
       run: |
         echo "ruby-2.5.1" > ~/.ruby-version
     - name: Build and test with Rake
+      env:
+        PGHOST: 127.0.0.1
+        PGUSER: guilhermesette
+        RAILS_ENV: test
       run: |
         echo ruby --version
         sudo gem install bundler -v 1.17.2
