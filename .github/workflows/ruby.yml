@@ -19,5 +19,6 @@ jobs:
     - name: Build and test with Rake
       run: |
         echo ruby --version
+        sudo gem install bundler -v 1.17.2
         bundle install
         rake test
