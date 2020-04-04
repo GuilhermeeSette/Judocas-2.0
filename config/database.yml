@@ -50,6 +50,6 @@ test:
   host: localhost
   database: judocas_test
   pool: 5
-  username: guilhermesette
+  username: postgres
   password: postgres
   timeout: 5000
