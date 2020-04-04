@@ -29,8 +29,8 @@ jobs:
     - name: Build and test with Rake
       env:
         PGHOST: 127.0.0.1
-        PGUSER: guilhermesette
-        PGPASSWORD: postgres
+        PGUSER: postgres
+        POSTGRES_PASSWORD: postgres
         RAILS_ENV: test
       run: |
         echo ruby --version
