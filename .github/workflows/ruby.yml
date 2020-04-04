@@ -28,8 +28,7 @@ jobs:
         echo "ruby-2.5.1" > ~/.ruby-version
     - name: Build and test with Rake
       env:
-        PGHOST: 127.0.0.1
-        PGUSER: postgres
+        POSTGRES_HOST: 127.0.0.1
         POSTGRES_PASSWORD: postgres
         RAILS_ENV: test
       run: |
