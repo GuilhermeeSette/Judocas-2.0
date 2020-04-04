@@ -30,7 +30,7 @@ jobs:
       env:
         PGHOST: 127.0.0.1
         PGUSER: guilhermesette
-        PGPASSWORD:
+        PGPASSWORD: postgres
         RAILS_ENV: test
       run: |
         echo ruby --version
