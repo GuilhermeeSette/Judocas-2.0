@@ -47,6 +47,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: judocas_test
   pool: 5
   username: guilhermesette
