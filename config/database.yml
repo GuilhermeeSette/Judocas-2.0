@@ -47,8 +47,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: judocas_test
   pool: 5
-  username: guilhermesette
-  password:
+  username: postgres
+  password: postgres
   timeout: 5000

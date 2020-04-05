@@ -1,4 +1,25 @@
 class Aluno < ApplicationRecord
-  has_one :professor
   has_one :faixa
+  validates :nome, presence: true
+  validates :registro_cbj, presence: true, uniqueness: true
+  validates :telefone1, presence: true
+  validates :email, presence: true, uniqueness: true
+  validates :cpf, presence: true, uniqueness: true
+  validates :rg, presence: true
+  validates :rua, presence: true
+  validates :numero_residencia, presence: true
+  validates :bairro, presence: true
+  validates :cidade, presence: true
+  validates :estado, presence: true
+  validates :cep, presence: true
+
+  validates_format_of :email,
+                        with: /\A\w+([-\.]?\w)*@([a-z\d]+[-\.])*([a-z\d]+\.)[a-z]+\z/i,
+                        if: lambda { self.email.present? }
+  validates_format_of :cep,
+                        with: /\d{5}-\d{3}/,
+                        if: lambda { self.cep.present? }
+  validates_format_of :telefone1,
+                        with: /\A\(\d{2}\)\s\d?\d{4}-\d{4}\z/,
+                        if: lambda { self.telefone1.present? }
 end
