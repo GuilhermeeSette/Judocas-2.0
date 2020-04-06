@@ -15,11 +15,6 @@ class EntidadesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should show entidade" do
-    get entidade_url(@entidade)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_entidade_url(@entidade)
     assert_response :success
