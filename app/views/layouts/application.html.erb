@@ -19,14 +19,18 @@
       <br>
       
       <a href="#" class="">
-        <%= link_to 'Alunos', alunos_path, class: "nav-item"%>
+        <%= link_to (image_tag 'dashboard.svg', class: "nav-icon") + ' Dashboard', root_path, class: "nav-item"%>
       </a>
       <a href="#" class="">
-        <%= link_to 'Professores', professors_path, class: "nav-item"%>
+        <%= link_to (image_tag 'karate.svg', class: "nav-icon") + ' Alunos', alunos_path, class: "nav-item"%>
       </a>
       <a href="#" class="">
-        <%= link_to 'Entidades', entidades_path, class: "nav-item"%>
+        <%= link_to (image_tag 'judo.svg', class: "nav-icon") + ' Professores', professors_path, class: "nav-item"%>
       </a>
+      <a href="#" class="">
+        <%= link_to (image_tag 'group.svg', class: "nav-icon") + ' Entidades', entidades_path, class: "nav-item"%>
+      </a>
+      <hr>
     </div>
 
     <div class="container-fluid" id="main">
