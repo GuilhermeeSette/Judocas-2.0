@@ -62,13 +62,14 @@ class AlunosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_aluno
-      @aluno = Aluno.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def aluno_params
-      params.require(:aluno).permit(:nome, :registro_cbj, :telefone1, :telefone2, :email, :cpf, :observacoes, :rg, :rua, :numero_residencia, :bairro, :cidade, :estado, :cep)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_aluno
+    @aluno = Aluno.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def aluno_params
+    params.require(:aluno).permit(:nome, :registro_cbj, :telefone1, :telefone2, :email, :cpf, :observacoes, :rg, :rua, :numero_residencia, :bairro, :cidade, :estado, :cep)
+  end
 end

@@ -62,13 +62,14 @@ class EntidadesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_entidade
-      @entidade = Entidade.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def entidade_params
-      params.require(:entidade).permit(:nome, :telefone1, :telefone2, :cnpj, :rua, :numero_residencia, :bairro, :cidade, :estado, :cep)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_entidade
+    @entidade = Entidade.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def entidade_params
+    params.require(:entidade).permit(:nome, :telefone1, :telefone2, :cnpj, :rua, :numero_residencia, :bairro, :cidade, :estado, :cep)
+  end
 end
