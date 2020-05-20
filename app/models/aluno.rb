@@ -17,7 +17,7 @@ class Aluno < ApplicationRecord
                       with: /\A\w+([-\.]?\w)*@([a-z\d]+[-\.])*([a-z\d]+\.)[a-z]+\z/i,
                       if: lambda { self.email.present? }
   validates_format_of :cep,
-                      with: /\d{5}\d{3}/,
+                      with: /\d{8}/,
                       if: lambda { self.cep.present? }
   validates_format_of :telefone1,
                       with: /\d{11}/,
