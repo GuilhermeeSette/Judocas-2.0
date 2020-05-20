@@ -17,4 +17,6 @@ class Entidade < ApplicationRecord
   validates_format_of :telefone1,
                       with: /\d{11}/,
                       if: lambda { self.telefone1.present? }
+
+  scope :search_like, -> (field_name, search_string) {where("#{field_name} LIKE ?", "%#{search_string}%")}
 end

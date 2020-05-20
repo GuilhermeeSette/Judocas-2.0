@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h3>Alunos</h3>
 <div class="row text-center">
   <div class="col-md-12">
@@ -11,6 +10,12 @@
             <th scope="col">Telefone</th>
             <th scope="col">Email</th>
             <th scope="col">Faixa</th>
+            <th>
+              <%= form_tag(alunos_path, method: :get) do %>
+                <%= text_field_tag(:search, params[:search], class: "search-bar rounded") %>
+                <%=submit_tag "Search", class: "btn-success rounded" %>
+              <% end %>
+            </th>
             
           </tr>
         </thead>

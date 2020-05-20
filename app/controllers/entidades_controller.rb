@@ -4,7 +4,11 @@ class EntidadesController < ApplicationController
   # GET /entidades
   # GET /entidades.json
   def index
-    @entidades = Entidade.all
+    @entidades = if params[:search].present?
+                    Entidade.search_like('nome', params[:search])
+                  else
+                    Entidade.all
+                  end
   end
 
   # GET /entidades/1
