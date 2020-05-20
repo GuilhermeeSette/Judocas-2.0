@@ -4,7 +4,11 @@ class AlunosController < ApplicationController
   # GET /alunos
   # GET /alunos.json
   def index
-    @alunos = Aluno.all
+    @alunos = if params[:search].present?
+                 Aluno.search_like('nome', params[:search])
+              else
+                 Aluno.all
+              end
   end
 
   # GET /alunos/1

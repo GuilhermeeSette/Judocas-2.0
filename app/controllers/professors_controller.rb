@@ -4,7 +4,11 @@ class ProfessorsController < ApplicationController
   # GET /professors
   # GET /professors.json
   def index
-    @professors = Professor.all
+    @professors = if params[:search].present?
+                    Professor.search_like('nome', params[:search])
+                  else
+                    Professor.all
+                  end
   end
 
   # GET /professors/1
