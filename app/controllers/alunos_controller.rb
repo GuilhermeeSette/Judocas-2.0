@@ -1,5 +1,5 @@
 class AlunosController < ApplicationController
-  before_action :set_aluno, only: [:show, :edit, :update, :destroy]
+  before_action :set_aluno, only: [:show, :edit, :update, :destroy, :become_professor]
 
   # GET /alunos
   # GET /alunos.json
@@ -62,6 +62,19 @@ class AlunosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to alunos_url, notice: 'Aluno was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def become_professor
+    @professor = Professor.new(nome: @aluno.nome, registro_cbj: @aluno.registro_cbj, telefone1: @aluno.telefone1, telefone2: @aluno.telefone2, email: @aluno.email, cpf: @aluno.cpf, observacoes: @aluno.observacoes, rg: @aluno.rg, rua: @aluno.rua, numero_residencia: @aluno.numero_residencia, bairro: @aluno.bairro, cidade: @aluno.cidade, estado: @aluno.estado, cep: @aluno.cep)
+    respond_to do |format|
+      if @professor.save
+        format.html { redirect_to @aluno, notice: 'Aluno virou professor!' }
+        format.json { render :show, status: :created, location: @aluno }
+      else
+        format.html { redirect_to @aluno, notice: "Professor já existe." }
+        format.html { render :show}
+      end
     end
   end
 

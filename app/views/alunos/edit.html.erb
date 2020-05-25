@@ -1,6 +1,9 @@
 <h1>Editing Aluno</h1>
 
 <%= render 'form', aluno: @aluno %>
+<button>
+  <%= link_to "Tornar Professor", become_alunos_path %>
+</button>
 
 <%= link_to 'Show', @aluno %> |
 <%= link_to 'Back', alunos_path %>
