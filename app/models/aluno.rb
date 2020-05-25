@@ -1,5 +1,6 @@
 class Aluno < ApplicationRecord
   has_one :faixa
+  has_many :professor
   validates :nome, presence: true
   validates :registro_cbj, presence: true, uniqueness: true
   validates :telefone1, presence: true
