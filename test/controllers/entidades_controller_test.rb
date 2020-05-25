@@ -15,11 +15,6 @@ class EntidadesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_entidade_url(@entidade)
-    assert_response :success
-  end
-
   test "should destroy entidade" do
     assert_difference('Entidade.count', -1) do
       delete entidade_url(@entidade)

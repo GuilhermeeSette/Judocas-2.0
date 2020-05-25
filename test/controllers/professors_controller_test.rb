@@ -10,16 +10,6 @@ class ProfessorsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_professor_url
-    assert_response :success
-  end
-
-  test "should show professor" do
-    get professor_url(@professor)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_professor_url(@professor)
     assert_response :success
