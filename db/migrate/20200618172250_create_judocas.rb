@@ -1,6 +1,5 @@
 class CreateJudocas < ActiveRecord::Migration[6.0]
   def change
-    drop_table :judocas
     create_table :judocas do |t|
       t.string :nome
       t.string :registro_cbj
