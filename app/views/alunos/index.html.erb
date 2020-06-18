@@ -20,16 +20,16 @@
           </tr>
         </thead>
         <tbody>
-          <% @alunos.each do |aluno| %>
+          <% @judocas.each do |judoca| %>
             <tr>
-              <td><%= aluno.nome %></td>
-              <td><%= aluno.telefone1 %></td>
-              <td><%= aluno.email %></td>
-              <td><%= aluno.cpf %></td>
+              <td><%= judoca.nome %></td>
+              <td><%= judoca.telefone1 %></td>
+              <td><%= judoca.email %></td>
+              <td><%= judoca.cpf %></td>
               <td>
-                <%= link_to 'Show', aluno %>
-                <%= link_to 'Edit', edit_aluno_path(aluno) %>
-                <%= link_to 'Destroy', aluno, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Show', judoca %>
+                <%= link_to 'Edit', edit_judoca_path(judoca) %>
+                <%= link_to 'Destroy', judoca, method: :delete, data: { confirm: 'Are you sure?' } %>
               </td>
           </tr>
           <% end %>
@@ -42,4 +42,4 @@
 <br>
 
 
-<%= link_to (image_tag 'plus-circle-solid.svg', class: "new-button"), new_aluno_path %>
+<%= link_to (image_tag 'plus-circle-solid.svg', class: "new-button"), new_judoca_path %>

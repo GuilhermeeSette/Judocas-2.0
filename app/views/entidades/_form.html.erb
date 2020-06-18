@@ -11,57 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :telefone1 %>
-    <%= form.text_field :telefone1 %>
+    <%= form.text_field :telefone1, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :telefone2 %>
-    <%= form.text_field :telefone2 %>
+    <%= form.text_field :telefone2, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :cnpj %>
-    <%= form.text_field :cnpj %>
+    <%= form.text_field :cnpj, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :rua %>
-    <%= form.text_field :rua %>
+    <%= form.text_field :rua, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :numero_residencia %>
-    <%= form.text_field :numero_residencia %>
+    <%= form.text_field :numero_residencia, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :bairro %>
-    <%= form.text_field :bairro %>
+    <%= form.text_field :bairro, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :cidade %>
-    <%= form.text_field :cidade %>
+    <%= form.text_field :cidade, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :estado %>
-    <%= form.text_field :estado %>
+    <%= form.text_field :estado, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field col-md-6">
     <%= form.label :cep %>
-    <%= form.text_field :cep %>
+    <%= form.text_field :cep, class: "form-control"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Salvar", class: "btn btn-primary" %>
   </div>
 <% end %>
