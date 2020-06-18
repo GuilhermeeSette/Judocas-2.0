@@ -16,13 +16,13 @@ class Aluno < ApplicationRecord
 
   validates_format_of :email,
                       with: /\A\w+([-\.]?\w)*@([a-z\d]+[-\.])*([a-z\d]+\.)[a-z]+\z/i,
-                      if: lambda { self.email.present? }
+                      if: -> { self.email.present? }
   validates_format_of :cep,
                       with: /\d{8}/,
-                      if: lambda { self.cep.present? }
+                      if: -> { self.cep.present? }
   validates_format_of :telefone1,
                       with: /\d{11}/,
-                      if: lambda { self.telefone1.present? }
+                      if: -> { self.telefone1.present? }
 
   scope :search_like, -> (field_name, search_string) {where("#{field_name} LIKE ?", "%#{search_string}%")}
 end
