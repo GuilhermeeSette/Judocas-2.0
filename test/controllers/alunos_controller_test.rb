@@ -20,11 +20,6 @@ class AlunosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_aluno_url(@aluno)
-    assert_response :success
-  end
-
   test "should destroy aluno" do
     assert_difference('Aluno.count', -1) do
       delete aluno_url(@aluno)

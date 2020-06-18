@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Judocas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Registro cbj</th>
+      <th>Telefone1</th>
+      <th>Telefone2</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Observacoes</th>
+      <th>Rg</th>
+      <th>Rua</th>
+      <th>Numero residencia</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cep</th>
+      <th>Is both roles</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @judocas.each do |judoca| %>
+      <tr>
+        <td><%= judoca.nome %></td>
+        <td><%= judoca.registro_cbj %></td>
+        <td><%= judoca.telefone1 %></td>
+        <td><%= judoca.telefone2 %></td>
+        <td><%= judoca.email %></td>
+        <td><%= judoca.cpf %></td>
+        <td><%= judoca.observacoes %></td>
+        <td><%= judoca.rg %></td>
+        <td><%= judoca.rua %></td>
+        <td><%= judoca.numero_residencia %></td>
+        <td><%= judoca.bairro %></td>
+        <td><%= judoca.cidade %></td>
+        <td><%= judoca.estado %></td>
+        <td><%= judoca.cep %></td>
+        <td><%= judoca.is_both_roles %></td>
+        <td><%= link_to 'Show', judoca %></td>
+        <td><%= link_to 'Edit', edit_judoca_path(judoca) %></td>
+        <td><%= link_to 'Destroy', judoca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Judoca', new_judoca_path %>

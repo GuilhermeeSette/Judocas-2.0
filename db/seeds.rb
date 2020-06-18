@@ -5,11 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Aluno.destroy_all
-Professor.destroy_all
+Judoca.destroy_all
 Entidade.destroy_all
 
-Aluno.create!([
+Judoca.create!([
             {nome: "Carlos Silva",
             registro_cbj: "abx",
             telefone1: "11987986772",
@@ -21,7 +20,8 @@ Aluno.create!([
             bairro: "Brasil",
             cidade: "Nárnia",
             estado: "Noruega",
-            cep: "09387748"},
+            cep: "09387748",
+            is_both_roles: false},
             {nome:  "Bruno Romão",
             registro_cbj: "abc",
             telefone1: "11987986772",
@@ -33,7 +33,8 @@ Aluno.create!([
             bairro: "Brasil",
             cidade: "Nárnia",
             estado: "Noruega",
-            cep: "09387748"},
+            cep: "09387748",
+            is_both_roles: false},
             {nome:  "Diana Silva",
             registro_cbj: "abd",
             telefone1: "11987986772",
@@ -45,7 +46,8 @@ Aluno.create!([
             bairro: "Brasil",
             cidade: "Nárnia",
             estado: "Noruega",
-            cep: "09387748"},
+            cep: "09387748",
+            is_both_roles: false},
             {nome:  "Eduardo Oliveira",
             registro_cbj: "abe",
             telefone1: "11987986772",
@@ -57,7 +59,8 @@ Aluno.create!([
             bairro: "Brasil",
             cidade: "Nárnia",
             estado: "Noruega",
-            cep: "09387748"},
+            cep: "09387748",
+            is_both_roles: false},
             {nome:  "Bruno Santos",
             registro_cbj: "abf",
             telefone1: "11987986772",
@@ -69,11 +72,12 @@ Aluno.create!([
             bairro: "Brasil",
             cidade: "Nárnia",
             estado: "Noruega",
-            cep: "09387748"}
+            cep: "09387748",
+            is_both_roles: false}
 ])
            
-Professor.create!([
-            {nome: "Carlos Silva",
+Judoca.create!([
+            {nome: "Jorge Silva",
             registro_cbj:"abx",
             telefone1:"11987986772",
             email:"c@email.com",
@@ -84,8 +88,9 @@ Professor.create!([
             bairro:"Brasil",
             cidade:"Nárnia",
             estado:"Noruega",
-            cep:"09387748"},
-            {nome: "Bruno Romão",
+            cep:"09387748",
+            is_both_roles: true},
+            {nome: "Mauricio Romão",
             registro_cbj:"abc",
             telefone1:"11987986772",
             email:"b@email.com",
@@ -96,8 +101,9 @@ Professor.create!([
             bairro:"Brasil",
             cidade:"Nárnia",
             estado:"Noruega",
-            cep:"09387748"},   
-            {nome: "Diana Silva",
+            cep:"09387748",
+            is_both_roles: true},   
+            {nome: "Caroline Silva",
             registro_cbj:"abd",
             telefone1:"11987986772",
             email:"d@email.com",
@@ -108,8 +114,9 @@ Professor.create!([
             bairro:"Brasil",
             cidade:"Nárnia",
             estado:"Noruega",
-            cep:"09387748"},          
-            {nome: "Eduardo Oliveira",
+            cep:"09387748",
+            is_both_roles: true},          
+            {nome: "Gabriel Oliveira",
             registro_cbj:"abe",
             telefone1:"11987986772",
             email:"e@email.com",
@@ -120,8 +127,9 @@ Professor.create!([
             bairro:"Brasil",
             cidade:"Nárnia",
             estado:"Noruega",
-            cep:"09387748"},         
-            {nome: "Bruno Santos",
+            cep:"09387748",
+            is_both_roles: true},         
+            {nome: "Thaynna Santos",
             registro_cbj:"abf",
             telefone1:"11987986772",
             email:"br@email.com",
@@ -132,7 +140,8 @@ Professor.create!([
             bairro:"Brasil",
             cidade:"Nárnia",
             estado:"Noruega",
-            cep:"09387748"},
+            cep:"09387748",
+            is_both_roles: true},
             ]) 
 
 Entidade.create!([

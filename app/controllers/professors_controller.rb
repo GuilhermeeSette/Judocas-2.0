@@ -4,10 +4,10 @@ class ProfessorsController < ApplicationController
   # GET /professors
   # GET /professors.json
   def index
-    @professors = if params[:search].present?
-                    Professor.search_like('nome', params[:search])
+    @judocas = if params[:search].present?
+                    Judoca.search_like('nome', params[:search]).where(is_both_roles: true)
                   else
-                    Professor.all
+                    Judoca.all.where(is_both_roles: true)
                   end
   end
 

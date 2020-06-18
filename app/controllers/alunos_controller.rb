@@ -4,11 +4,11 @@ class AlunosController < ApplicationController
   # GET /alunos
   # GET /alunos.json
   def index
-    @alunos = if params[:search].present?
-                 Aluno.search_like('nome', params[:search])
-              else
-                 Aluno.all
-              end
+    @judocas = if params[:search].present?
+      Judoca.search_like('nome', params[:search])
+   else
+    Judoca.all
+   end
   end
 
   # GET /alunos/1

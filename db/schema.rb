@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_005535) do
+ActiveRecord::Schema.define(version: 2020_06_18_172250) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,6 +56,26 @@ ActiveRecord::Schema.define(version: 2020_02_29_005535) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "judocas", force: :cascade do |t|
+    t.string "nome"
+    t.string "registro_cbj"
+    t.string "telefone1"
+    t.string "telefone2"
+    t.string "email"
+    t.string "cpf"
+    t.text "observacoes"
+    t.string "rg"
+    t.string "rua"
+    t.string "numero_residencia"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "estado"
+    t.string "cep"
+    t.boolean "is_both_roles"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "professors", force: :cascade do |t|
     t.string "nome"
     t.string "registro_cbj"
@@ -73,4 +94,5 @@ ActiveRecord::Schema.define(version: 2020_02_29_005535) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end
