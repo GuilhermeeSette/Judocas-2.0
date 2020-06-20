@@ -24,6 +24,7 @@ class Judoca < ApplicationRecord
                       if: -> { self.telefone1.present? }
 
   scope :search_like, -> (field_name, search_string) {where("#{field_name} LIKE ?", "%#{search_string}%")}
+  scope :is_professor, -> {where(is_both_roles: true)}
 
   CARTEIRA_STATUS = ["ATIVO", "EXPIRADO"].freeze
 end
