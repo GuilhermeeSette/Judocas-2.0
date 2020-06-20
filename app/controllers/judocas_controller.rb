@@ -56,8 +56,18 @@ class JudocasController < ApplicationController
   def destroy
     @judoca.destroy
     respond_to do |format|
-      format.html { redirect_to judocas_url, notice: 'Judoca was successfully destroyed.' }
+      format.html { redirect_back(fallback_location: request.original_url, notice: 'Judoca was successfully destroyed.') }
       format.json { head :no_content }
+    end
+  end
+
+  def activate_filiation
+    @judoca = Judoca.find(params[:judoca_id])
+    @judoca.carteira_status = Judoca::CARTEIRA_STATUS[0]
+    @judoca.save
+    respond_to do |format|
+      format.html { redirect_to @judoca, notice: 'Carteira renovada com sucesso!' }
+      format.json { render :show, status: :ok, location: @judoca }
     end
   end
 
