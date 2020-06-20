@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_172250) do
+ActiveRecord::Schema.define(version: 2020_06_20_123745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_172250) do
     t.boolean "is_both_roles"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "carteira_status"
   end
 
   create_table "professors", force: :cascade do |t|

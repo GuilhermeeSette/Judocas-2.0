@@ -47,7 +47,8 @@ Judoca.create!([
             cidade: "Nárnia",
             estado: "Noruega",
             cep: "09387748",
-            is_both_roles: false},
+            is_both_roles: false,
+            carteira_status: "EXPIRADO"},
             {nome:  "Eduardo Oliveira",
             registro_cbj: "abe",
             telefone1: "11987986772",
@@ -73,7 +74,8 @@ Judoca.create!([
             cidade: "Nárnia",
             estado: "Noruega",
             cep: "09387748",
-            is_both_roles: false}
+            is_both_roles: false,
+            carteira_status: "EXPIRADO"}
 ])
            
 Judoca.create!([

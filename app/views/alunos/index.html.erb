@@ -21,7 +21,7 @@
         </thead>
         <tbody>
           <% @judocas.each do |judoca| %>
-            <tr>
+            <tr class="<%=judoca.carteira_status == Judoca::CARTEIRA_STATUS[1]? "expired" : "" %>">
               <td><%= judoca.nome %></td>
               <td><%= judoca.telefone1 %></td>
               <td><%= judoca.email %></td>
@@ -29,7 +29,10 @@
               <td>
                 <%= link_to 'Show', judoca %>
                 <%= link_to 'Edit', edit_judoca_path(judoca) %>
-                <%= link_to 'Destroy', judoca, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Destroy', judoca, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+                <% if judoca.carteira_status == Judoca::CARTEIRA_STATUS[1] %>
+                  <%= link_to 'Renovar', judoca_activate_filiation_path(judoca), method: :put, data: { confirm: 'Você quer renovar a carteira desse Judoca?' } %>
+                <% end %>
               </td>
           </tr>
           <% end %>
