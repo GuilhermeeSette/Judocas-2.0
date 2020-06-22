@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'simplecov', require: false, group: :test
+gem 'simplecov-cobertura', require: false
+
 
 # lint - rubocop
 gem 'rubocop', '~> 0.80.0', require: false

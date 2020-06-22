@@ -24,4 +24,10 @@ class JudocasControllerTest < ActionDispatch::IntegrationTest
     get edit_judoca_url(@judoca)
     assert_response :success
   end
+
+  test "should destroy aluno" do
+    assert_difference('Judoca.count', -1) do
+      delete judoca_url(@judoca)
+    end
+  end
 end
